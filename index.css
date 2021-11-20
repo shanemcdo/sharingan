@@ -46,16 +46,13 @@ html{
     width: var(--pupil-size);
     height: var(--pupil-size);
     background: black;
+    box-shadow: 0px 0px calc(var(--size) / 5) rgba(0, 0, 0, 20);
 }
 
 .sharingan{
     background: red;
     --inner-ring-size: calc(var(--size) / 1.9);
     animation: rotation 10s linear infinite; 
-}
-
-.sharingan .pupil{
-    box-shadow: 0px 0px calc(var(--size) / 5) rgba(0, 0, 0, 20);
 }
 
 .inner-ring{
