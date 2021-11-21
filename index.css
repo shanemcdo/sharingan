@@ -35,7 +35,7 @@ html{
     width: 100%;
     height: 100%;
     border: calc(var(--size) / 100) solid black;
-    background: blue;
+    background: gray;
     box-sizing: border-box; /* Keep eye inside wrapper */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
