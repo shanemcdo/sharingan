@@ -30,4 +30,16 @@ function set_tomoe_rotation(){
         tomoes[i].style.transform = `rotate(${i / tomoes.length}turn)`;
 }
 
-set_tomoe_rotation();
+document.addEventListener('keydown', event=>{
+    switch (event.key) {
+        case ' ':
+            add_tomoe();
+            break;
+        case 'Backspace':
+            remove_tomoe();
+            break;
+        default:
+            console.log(event.key);
+            console.log(event);
+    }
+});

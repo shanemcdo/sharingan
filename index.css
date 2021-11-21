@@ -6,6 +6,7 @@ html{
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .hidden{
@@ -39,7 +40,8 @@ html{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-shadow: inset 0px 0px calc(var(--size) / 5) rgba(0, 0, 0, 20);
-    --pupil-size: 18%;
+    --pupil-size: 25%;
+    overflow: hidden;
 }
 
 .pupil{
@@ -52,6 +54,7 @@ html{
 .sharingan{
     background: red;
     --inner-ring-size: calc(var(--size) / 1.9);
+    --pupil-size: 18%;
     animation: rotation 10s linear infinite; 
 }
 
@@ -69,6 +72,10 @@ html{
     position: absolute;
     font-size: calc(var(--size) / 2);
     height: 5%;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 @keyframes rotation{
