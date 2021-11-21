@@ -30,8 +30,10 @@ function remove_tomoe(){
 }
 
 function set_tomoe_rotation(){
-    for(let i = 0; i < tomoes.length; i++)
+    for(let i = 0; i < tomoes.length; i++){
         tomoes[i].style.transform = `rotate(${i / tomoes.length}turn)`;
+        tomoes[i].classList.add('fade-anim'); // adding now activates the animation;
+    }
 }
 
 function update(){

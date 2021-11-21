@@ -8,7 +8,6 @@ html{
     height: 100%;
     overflow: hidden;
 }
-
 .hidden{
     display: none;
 }
@@ -42,6 +41,7 @@ html{
     box-shadow: inset 0px 0px calc(var(--size) / 5) rgba(0, 0, 0, 20);
     --pupil-size: 25%;
     overflow: hidden;
+    transition: background 0.5s ease;
 }
 
 .pupil{
@@ -49,6 +49,8 @@ html{
     height: var(--pupil-size);
     background: black;
     box-shadow: 0px 0px calc(var(--size) / 5) rgba(0, 0, 0, 20);
+    transition: all 0.5s ease;
+    transition-property: width, height;
 }
 
 .sharingan{
@@ -65,6 +67,12 @@ html{
     width: var(--inner-ring-size);
     height: var(--inner-ring-size);
     filter: blur(4px);
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.sharingan .inner-ring{
+    opacity: 1;
 }
 
 .tomoe{
@@ -76,6 +84,16 @@ html{
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    transition: transform 0.5s ease;
+}
+
+.fade-anim{
+    animation: fade-in 0.5s linear 1;
+}
+
+@keyframes fade-in{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 
 @keyframes rotation{
