@@ -2,6 +2,7 @@ let tomoe_div = document.createElement('div');
 tomoe_div.innerHTML = ',';
 tomoe_div.classList.add('tomoe');
 let eye = document.querySelector('.eye');
+let audio = new Audio('sharingan.mp3');
 
 let tomoes = [];
 function get_tomoe(){
@@ -9,6 +10,9 @@ function get_tomoe(){
 }
 
 function add_tomoe(){
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
     eye.appendChild(tomoe_div.cloneNode(true));
     get_tomoe();
     set_tomoe_rotation();
@@ -37,6 +41,7 @@ function update(){
             remove_tomoe();
             remove_tomoe();
             break;
+        case 0:
         default:
             add_tomoe();
     }
