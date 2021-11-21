@@ -38,15 +38,12 @@ function set_tomoe_rotation(){
 }
 
 function update(){
-    switch(tomoes.length){
-        case 3:
+    let size = tomoes.length;
+    if(size >= 3){
+        for(let i = 0; i < size; i++)
             remove_tomoe();
-            remove_tomoe();
-            remove_tomoe();
-            break;
-        case 0:
-        default:
-            add_tomoe();
+    }else{
+        add_tomoe();
     }
 }
 
@@ -58,8 +55,5 @@ document.addEventListener('keydown', event=>{
         case 'Backspace':
             remove_tomoe();
             break;
-        default:
-            console.log(event.key);
-            console.log(event);
     }
 });
