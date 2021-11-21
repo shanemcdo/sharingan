@@ -60,7 +60,7 @@ document.addEventListener('keydown', event=>{
             remove_tomoe();
             break;
         default:
-            console.log(event.key);
-            console.log(event.keyCode);
+            // console.log(event.key);
+            // console.log(event.keyCode);
     }
 });
