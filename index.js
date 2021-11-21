@@ -50,10 +50,17 @@ function update(){
 document.addEventListener('keydown', event=>{
     switch (event.key) {
         case ' ':
+            update();
+            break;
+        case '+':
             add_tomoe();
             break;
+        case '-':
         case 'Backspace':
             remove_tomoe();
             break;
+        default:
+            console.log(event.key);
+            console.log(event.keyCode);
     }
 });
