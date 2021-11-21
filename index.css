@@ -55,7 +55,7 @@ html{
     background: red;
     --inner-ring-size: calc(var(--size) / 1.9);
     --pupil-size: 18%;
-    animation: rotation 10s linear infinite; 
+    animation: rotation 8s linear infinite; 
 }
 
 .inner-ring{

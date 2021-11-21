@@ -30,6 +30,18 @@ function set_tomoe_rotation(){
         tomoes[i].style.transform = `rotate(${i / tomoes.length}turn)`;
 }
 
+function update(){
+    switch(tomoes.length){
+        case 3:
+            remove_tomoe();
+            remove_tomoe();
+            remove_tomoe();
+            break;
+        default:
+            add_tomoe();
+    }
+}
+
 document.addEventListener('keydown', event=>{
     switch (event.key) {
         case ' ':
