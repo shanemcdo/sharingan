@@ -10,12 +10,16 @@ function get_tomoe(){
     tomoes = document.querySelectorAll('.tomoe');
 }
 
-function play_audio(){
+function play_sharingan(){
     new Audio('sharingan.mp3').play();
 }
 
+function play_rinnegan(){
+    new Audio('rinnegan.mp3').play();
+}
+
 function add_tomoe(){
-    play_audio();
+    play_sharingan();
     eye.appendChild(tomoe_div.cloneNode(true));
     get_tomoe();
     set_tomoe_rotation();
@@ -51,6 +55,7 @@ function update(){
             remove_tomoe();
         full_eye.classList.add('rinnegan');
         rinnegan = true;
+        play_rinnegan();
     }else{
         add_tomoe();
     }
