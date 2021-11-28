@@ -1,7 +1,9 @@
 let tomoe_div = document.createElement('div');
 tomoe_div.innerHTML = ',';
 tomoe_div.classList.add('tomoe');
+let full_eye = document.querySelector('.full-eye');
 let eye = document.querySelector('.eye');
+let rinnegan = false;
 
 let tomoes = [];
 function get_tomoe(){
@@ -38,10 +40,17 @@ function set_tomoe_rotation(){
 }
 
 function update(){
+    if(rinnegan){
+        rinnegan = false;
+        full_eye.classList.remove('rinnegan');
+        return;
+    }
     let size = tomoes.length;
     if(size >= 3){
         for(let i = 0; i < size; i++)
             remove_tomoe();
+        full_eye.classList.add('rinnegan');
+        rinnegan = true;
     }else{
         add_tomoe();
     }
