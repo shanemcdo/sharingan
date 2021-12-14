@@ -4,8 +4,9 @@ tomoe_div.classList.add('tomoe');
 let full_eye = document.querySelector('.full-eye');
 let eye = document.querySelector('.eye');
 let rinnegan = false;
-
 let tomoes = [];
+const TOMOE_TRANSLATION = 'translatey(45%)';
+
 function get_tomoe(){
     tomoes = document.querySelectorAll('.tomoe');
 }
@@ -38,7 +39,7 @@ function remove_tomoe(){
 
 function set_tomoe_rotation(){
     for(let i = 0; i < tomoes.length; i++){
-        tomoes[i].style.transform = `rotate(${i / tomoes.length}turn)`;
+        tomoes[i].style.transform = ` rotate(${i / tomoes.length}turn) ${TOMOE_TRANSLATION}`;
         tomoes[i].classList.add('fade-anim'); // adding now activates the animation;
     }
 }
