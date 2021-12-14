@@ -55,7 +55,6 @@ html{
     --pupil-size: 25%;
     overflow: hidden;
     transition: background 0.5s ease;
-    --inner-ring-size: calc(var(--size) / 1.9);
 }
 
 .pupil{
@@ -71,6 +70,7 @@ html{
     background: red;
     --pupil-size: 18%;
     animation: rotation 8s linear infinite; 
+    --inner-ring-size: calc(var(--size) / 1.9);
 }
 
 .inner-ring{
