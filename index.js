@@ -5,7 +5,7 @@ let full_eye = document.querySelector('.full-eye');
 let eye = document.querySelector('.eye');
 let rinnegan = false;
 let tomoes = [];
-let inner_ring_size = getComputedStyle(document.querySelector('.eye')).getPropertyValue('--inner-ring-size');
+let inner_ring_size = getComputedStyle(eye).getPropertyValue('--inner-ring-size');
 const TOMOE_TRANSLATION = `translatey(calc(${inner_ring_size} / 2.5))`;
 
 function get_tomoe(){
