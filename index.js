@@ -12,11 +12,15 @@ function get_tomoe(){
 }
 
 function play_sharingan(){
-    new Audio('sharingan.mp3').play();
+    const audio = new Audio('sharingan.mp3')
+	audio.volume = 0.1;
+	audio.play();
 }
 
 function play_rinnegan(){
-    new Audio('rinnegan.mp3').play();
+    const audio = new Audio('rinnegan.mp3')
+	audio.volume = 0.5;
+	audio.play()
 }
 
 function add_tomoe(){
